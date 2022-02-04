@@ -6,9 +6,12 @@ console.log(
     '\n'+
     "Note: If the number is a multiple of both 3 and 5, only count it once."
 )
-var numberInput = 10;
-solution(numberInput);
+//Input number to solve the exercise01, change  line 10 number as needed.
+let numberInput = 10;
+let result = solution(numberInput);
+console.log('Exercise01 solution for number '+numberInput+' is '+ result)
 
+//Solves the exercise01
  function solution(number){
     let numberToTest = number-1;
     let result = 0;
@@ -27,9 +30,10 @@ solution(numberInput);
     numbers.forEach(number => {
         result = result + number;
     });
-    console.log('Exercise01 solution for number '+numberInput+' is '+ result)
+    return result;
  }
 
+ //Verifies if number is a multiple of the other
  function numberIsMultipleOf(number, multiple){
     if (number % multiple == 0){
         return true
